@@ -1607,6 +1607,9 @@ p {
   margin: 2.5rem 0;
   display: block;
   margin: 2.5rem auto; }
+  @media (min-width: 833px) {
+    .logo {
+      margin: auto; } }
 
 .title-large {
   font-size: 8.5vw; }

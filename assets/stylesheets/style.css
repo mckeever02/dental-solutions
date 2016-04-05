@@ -1114,18 +1114,26 @@ table.dataTable.no-footer {
     @media (min-width: 700px) {
       .slider-item p {
         font-size: 1.8rem;
-        margin-bottom: 1rem; } }
+        margin-bottom: 3rem; } }
   .slider-item .button {
     font-size: 1.2rem;
     padding: 0;
     border: 0;
     margin: 0; }
+    .slider-item .button:hover, .slider-item .button:focus {
+      background-color: transparent;
+      color: #2192ca; }
     @media (min-width: 550px) {
       .slider-item .button {
         font-size: 1.4rem; } }
     @media (min-width: 700px) {
       .slider-item .button {
-        font-size: 1.6rem; } }
+        font-size: 1.6rem;
+        padding: 0 15px;
+        border: 2px solid #39A8DF; }
+        .slider-item .button:hover, .slider-item .button:focus {
+          background-color: #39A8DF;
+          color: white; } }
 
 .slick-dots {
   list-style-type: none;
@@ -1211,6 +1219,10 @@ img {
 .section-white {
   color: white; }
 
+.section-laugh {
+  background-image: url("../images/laugh.jpg");
+  background-size: cover; }
+
 .section-gradient_radial {
   /* Chrome10-25,Safari5.1-6 */
   background: radial-gradient(ellipse at center, #ffffff 0%, lightgray 100%);
@@ -1285,6 +1297,9 @@ img {
   position: relative;
   z-index: 2; }
 
+.container-overlay {
+  z-index: 2; }
+
 @media (min-width: 1260px) {
   .qualified-staff-item p, .dental-treatments-item p {
     color: #39A8DF; }
@@ -1331,6 +1346,9 @@ img {
 
 .overlay-light {
   background-color: #fff; }
+
+.overlay-dark {
+  background-color: rgba(0, 0, 0, 0.7); }
 
 .fullscreen-bg {
   position: fixed;
@@ -1427,10 +1445,17 @@ img {
 
 .header-helper {
   position: absolute;
-  top: 0;
-  left: 0; }
+  z-index: 999;
+  top: 10px;
+  left: 10px; }
+  .header-helper .container {
+    padding: 0; }
   .header-helper .button {
-    border-radius: 3px; }
+    border-radius: 3px;
+    font-size: 1.0rem;
+    line-height: 35px;
+    height: 35px;
+    padding: 0 10px; }
   @media (min-width: 833px) {
     .header-helper {
       animation: 1s ease-in slideIn;
@@ -1438,6 +1463,20 @@ img {
       text-align: center; }
       .header-helper .button {
         float: right; } }
+  @media (min-width: 833px) {
+    .header-helper {
+      position: relative;
+      top: 0;
+      left: 0; }
+      .header-helper .container {
+        padding: 0 20px; }
+      .header-helper .button {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        font-size: 1.2rem;
+        line-height: 45px;
+        height: 45px;
+        padding: 0 15px; } }
 
 .help-info {
   background-color: #39A8DF;
@@ -1564,7 +1603,10 @@ p {
   background: url("../images/logo.svg") no-repeat;
   background-size: contain;
   background-position: center;
-  width: 227px; }
+  width: 227px;
+  margin: 2.5rem 0;
+  display: block;
+  margin: 2.5rem auto; }
 
 .title-large {
   font-size: 8.5vw; }
@@ -1645,7 +1687,7 @@ blockquote {
     font-size: 2.4rem; } }
 
 .title-slider {
-  font-size: 1.4rem; }
+  font-size: 2.8rem; }
   @media (min-width: 550px) {
     .title-slider {
       font-size: 2.8rem; } }
@@ -1674,7 +1716,8 @@ address {
   z-index: 999; }
 
 .nav-collapse {
-  width: 100%; }
+  width: 100%;
+  background-color: #39A8DF; }
 
 .nav-collapse ul {
   margin: 0;
@@ -1791,7 +1834,7 @@ address {
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
   width: 30px;
   height: 3px;
-  background-color: #196f99;
+  background-color: #39A8DF;
   border-radius: 4px;
   position: absolute;
   transition-property: transform;

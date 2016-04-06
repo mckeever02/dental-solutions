@@ -1132,10 +1132,10 @@ table.dataTable.no-footer {
     @media (min-width: 700px) {
       .slider-item .button {
         font-size: 1.6rem;
-        padding: 0 15px;
+        text-transform: lowercase;
+        padding: 0 40px;
         border: 2px solid #39A8DF;
         line-height: 45px;
-        height: 45px;
         text-align: center; }
         .slider-item .button:hover, .slider-item .button:focus {
           background-color: #39A8DF;
@@ -1144,14 +1144,14 @@ table.dataTable.no-footer {
 .slick-dots {
   list-style-type: none;
   text-align: center;
-  padding: 1.25rem 0;
+  padding: 2.5rem 0;
   margin-bottom: 0;
   position: relative;
   z-index: 2;
   display: none !important; }
   @media (min-width: 550px) {
     .slick-dots {
-      margin-top: -4.8rem;
+      margin-top: -7.3rem;
       display: block !important; } }
   .slick-dots li {
     display: inline-block;
@@ -1764,7 +1764,7 @@ p {
 blockquote {
   margin: 0; }
 
-.quote-large blockquote, .quote-large author {
+.quote-large blockquote p, .quote-large author {
   font-size: 1.8rem; }
 
 .quote-large author {
@@ -1781,7 +1781,7 @@ blockquote {
       width: 33px; } }
 
 @media (min-width: 700px) {
-  .quote-large blockquote, .quote-large author {
+  .quote-large blockquote p, .quote-large author {
     font-size: 2.4rem; } }
 
 .title-slider {
@@ -2039,7 +2039,6 @@ a {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .button {
   display: inline-block;
-  height: 45px;
   padding: 0 15px;
   color: white;
   text-align: center;
@@ -2131,7 +2130,8 @@ a {
   border-left: 10px solid currentColor; }
 
 .button-small {
-  font-size: 1.2rem; }
+  font-size: 1.2rem;
+  line-height: 35px; }
 
 .button-large {
   font-size: 2.0rem; }

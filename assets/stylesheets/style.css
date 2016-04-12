@@ -402,6 +402,14 @@ th {
     max-width: 590px; }
   .container.container-large {
     max-width: 960px; }
+  .container.container-fluid {
+    max-width: 80%; }
+    @media (min-width: 1920px) {
+      .container.container-fluid {
+        max-width: 60%; } }
+    @media (min-width: 2550px) {
+      .container.container-fluid {
+        max-width: 50%; } }
 
 .nav-container {
   padding-left: 20px; }
@@ -1401,7 +1409,7 @@ img {
   width: 100%;
   height: 100%;
   z-index: 1;
-  opacity: .9; }
+  opacity: .8; }
 
 .overlay-light {
   background-color: #fff; }
@@ -1630,6 +1638,51 @@ img {
         border-right: 0; } }
   .help-info_navigation li {
     margin-bottom: 2rem; }
+
+.flex-grid.u-flex-v-center.team-item {
+  display: block;
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+  margin: 5rem 0; }
+  .flex-grid.u-flex-v-center.team-item img {
+    display: none; }
+  .flex-grid.u-flex-v-center.team-item .team-item-content {
+    position: relative;
+    z-index: 2; }
+  @media (min-width: 700px) {
+    .flex-grid.u-flex-v-center.team-item {
+      display: flex;
+      background-image: none !important; }
+      .flex-grid.u-flex-v-center.team-item:nth-of-type(even) {
+        flex-direction: row-reverse; }
+        .flex-grid.u-flex-v-center.team-item:nth-of-type(even) img {
+          float: left; }
+      .flex-grid.u-flex-v-center.team-item img {
+        float: right;
+        display: block; }
+      .flex-grid.u-flex-v-center.team-item .overlay {
+        display: none; } }
+  @media (min-width: 1260px) {
+    .flex-grid.u-flex-v-center.team-item .team-item-content {
+      width: 80%; } }
+
+.team-item-content .intro-text {
+  font-size: 2.0rem; }
+
+.team-item-heading {
+  margin-bottom: 2.5rem; }
+  .team-item-heading .team-item-title {
+    margin-bottom: 0;
+    font-size: 2.6rem; }
+  .team-item-heading .team-item-initials {
+    font-weight: 300; }
+  @media (min-width: 550px) {
+    .team-item-heading .team-item-title {
+      font-size: 3.0rem; } }
+  @media (min-width: 700px) {
+    .team-item-heading .team-item-title {
+      font-size: 3.6rem; } }
 
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -2480,6 +2533,13 @@ form {
 
 .u-v-align-middle {
   vertical-align: middle; }
+
+.u-flex {
+  display: flex; }
+
+.u-flex-v-center {
+  -ms-grid-row-align: center;
+      align-items: center; }
 
 /* Misc
 –––––––––––––––––––––––––––––––––––––––––––––––––– */

@@ -1667,8 +1667,10 @@ img {
     .flex-grid.u-flex-v-center.team-item .team-item-content {
       width: 80%; } }
 
-.team-item-content .intro-text {
-  font-size: 2.0rem; }
+@media (min-width: 550px) {
+  .team-item-content .intro-text {
+    font-size: 2.0rem;
+    line-height: 1.6; } }
 
 .team-item-heading {
   margin-bottom: 2.5rem; }
@@ -1683,6 +1685,9 @@ img {
   @media (min-width: 700px) {
     .team-item-heading .team-item-title {
       font-size: 3.6rem; } }
+
+.slider-page-featured-image {
+  max-height: 500px; }
 
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -1797,10 +1802,12 @@ p {
       font-size: 1.8rem; } }
 
 .text-huge {
-  font-size: 1.8rem; }
+  font-size: 1.8rem;
+  line-height: 1.6; }
   @media (min-width: 550px) {
     .text-huge {
-      font-size: 2.4rem; } }
+      font-size: 2.4rem;
+      line-height: 1.5; } }
 
 .text-small {
   font-size: 1.4rem; }
@@ -1855,6 +1862,9 @@ blockquote {
 
 address {
   font-style: normal; }
+
+.post-content h3, .post-content h4, .post-content h5 {
+  color: #39A8DF; }
 
 /*! responsive-nav.js 1.0.39 by @viljamis */
 .menu-link {
@@ -2336,14 +2346,15 @@ label > .label-body {
 /* Lists
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 ul {
-  list-style: circle inside; }
+  list-style: disc inside; }
 
 ol {
   list-style: decimal inside; }
 
 ol, ul {
   padding-left: 0;
-  margin-top: 0; }
+  margin-top: 0;
+  font-size: 1.6rem; }
 
 ul ul,
 ul ol,

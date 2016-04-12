@@ -1110,12 +1110,13 @@ table.dataTable.no-footer {
 
 .slider-item {
   background-repeat: no-repeat;
-  margin-bottom: 0; }
-  .slider-item .one-half.column {
-    width: 48%; }
+  margin-bottom: 0;
+  text-align: center; }
+  .slider-item img {
+    width: 175px;
+    margin: auto; }
   .slider-item p {
-    font-size: 1.0rem;
-    margin-bottom: 0; }
+    font-size: 1.4rem; }
     @media (min-width: 550px) {
       .slider-item p {
         font-size: 1.6rem; } }
@@ -1123,31 +1124,11 @@ table.dataTable.no-footer {
       .slider-item p {
         font-size: 1.8rem;
         margin-bottom: 3rem; } }
-  .slider-item .button {
-    font-size: 1.0rem;
-    padding: 0;
-    border: 0;
-    margin: 0;
-    height: auto;
-    line-height: 1;
-    text-align: left; }
-    .slider-item .button:hover, .slider-item .button:focus {
-      background-color: transparent;
-      color: #2192ca; }
-    @media (min-width: 550px) {
-      .slider-item .button {
-        font-size: 1.4rem; } }
-    @media (min-width: 700px) {
-      .slider-item .button {
-        font-size: 1.6rem;
-        text-transform: lowercase;
-        padding: 0 40px;
-        border: 2px solid #39A8DF;
-        line-height: 45px;
-        text-align: center; }
-        .slider-item .button:hover, .slider-item .button:focus {
-          background-color: #39A8DF;
-          color: white; } }
+  @media (min-width: 550px) {
+    .slider-item {
+      text-align: left; }
+      .slider-item img {
+        width: auto; } }
 
 .slick-dots {
   list-style-type: none;
@@ -1997,7 +1978,7 @@ blockquote {
     font-size: 2.4rem; } }
 
 .title-slider {
-  font-size: 1.8rem;
+  font-size: 2.0rem;
   line-height: 1.2; }
   @media (min-width: 550px) {
     .title-slider {

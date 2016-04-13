@@ -2172,7 +2172,9 @@ address {
 .treatment-nav {
   border: 1px solid #E0E0E0;
   margin-bottom: 2.5rem;
-  position: relative; }
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 999; }
   .treatment-nav ul {
     width: 100%;
     margin: 0;

@@ -20068,14 +20068,15 @@ $(function(){
      autoplay: true,
      autoplaySpeed: 5000,
      cssEase: 'ease-in',
-     fade: true
+     fade: true,
+     pauseOnHover: false
    });
 
 });
 
 //Help Info Slide
 $(function(){
-  $('.button-help, #contact-link').click(function() {
+  $('.button-help').click(function() {
     $('.help-info').toggleClass('closed');
   });
 });
@@ -20098,7 +20099,7 @@ $(".required").keyup(function(){
 
 $(function(){
 
-  $('ul.tabs li').click(function(){
+  $('.tab-link').click(function(){
   var tab_id = $(this).attr('data-tab');
 
   $('ul.tabs li').removeClass('current');
@@ -20107,7 +20108,16 @@ $(function(){
   $(this).addClass('current');
   $("#"+tab_id).addClass('current');
   })
+  $('a#contact-link').click(function() {
+    $('.help-info').toggleClass('closed');
+    $('ul.tabs li').removeClass('current');
+    $('.tab-content').removeClass('current');
+    $('ul.tabs li[data-tab="tab-2"]').addClass('current');
+    $("#tab-2").addClass('current');
+  })
 });
+
+
 
 $(window).load(function() {
   $(".before-after").twentytwenty();

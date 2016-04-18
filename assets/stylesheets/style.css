@@ -2403,6 +2403,7 @@ input[type="text"],
 input[type="tel"],
 input[type="url"],
 input[type="password"],
+input[type="date"],
 textarea,
 select {
   height: 38px;
@@ -2421,6 +2422,7 @@ select {
   input[type="tel"]:focus,
   input[type="url"]:focus,
   input[type="password"]:focus,
+  input[type="date"]:focus,
   textarea:focus,
   select:focus {
     border: 1px solid #33C3F0;
@@ -2434,13 +2436,14 @@ input[type="text"],
 input[type="tel"],
 input[type="url"],
 input[type="password"],
+input[type="date"],
 textarea {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none; }
 
 textarea {
-  min-height: 65px;
+  min-height: 100px;
   padding-top: 6px;
   padding-bottom: 6px; }
 
@@ -2541,6 +2544,9 @@ input.input-inline {
       border-bottom-right-radius: 0;
       width: auto;
       margin-bottom: 0; } }
+
+.input-full-width {
+  width: 100%; }
 
 .answer-form .error {
   display: none; }

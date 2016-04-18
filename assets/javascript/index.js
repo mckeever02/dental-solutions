@@ -20288,7 +20288,7 @@ $(function() {
       if (target.length) {
         $('html, body').animate({
           scrollTop: target.offset().top
-        }, 500);
+        }, 300);
         return false;
       }
     }
@@ -20299,10 +20299,15 @@ $(function() {
 $(function(){
   var table = $('#pricing-table').DataTable({
         "columnDefs": [
-            { "visible": false, "targets": 2 }
+            { "visible": false, "targets": 3 }
         ],
-        "order": [[ 2, 'asc' ]],
-        "displayLength": 25,
+        "aaSorting": [[ 2, "asc" ]],
+        "aoColumns":[
+          {"bSortable": false},
+          {"bSortable": true},
+          {"bVisible": false}
+        ],
+        "displayLength": -1,
         "bInfo": false,
         "bLengthChange": false,
         "bPaginate": false,
@@ -20311,7 +20316,7 @@ $(function(){
             var rows = api.rows( {page:'current'} ).nodes();
             var last=null;
 
-            api.column(2, {page:'current'} ).data().each( function ( group, i ) {
+            api.column(3, {page:'current'} ).data().each( function ( group, i ) {
                 if ( last !== group ) {
                     $(rows).eq( i ).before(
                         '<tr class="group"><td colspan="5">'+group+'</td></tr>'
@@ -20332,7 +20337,7 @@ $(function(){
      dots: true,
      adaptiveHeight: true,
      draggable: false,
-     speed: 450,
+     speed: 650,
      autoplay: true,
      autoplaySpeed: 5000,
      cssEase: 'ease-in',
@@ -20380,7 +20385,7 @@ $(function(){
   $(this).addClass('current');
   $("#"+tab_id).addClass('current');
   })
-  $('a#contact-link').click(function() {
+  $('a#contact-link, a.contact-link').click(function() {
     $('.help-info').toggleClass('closed');
     $('ul.tabs li').removeClass('current');
     $('.tab-content').removeClass('current');
@@ -20446,6 +20451,18 @@ var $el, $ps, $up, totalHeight;
     // prevent jump-down
     return false;
 
+  });
+
+  $(function(){
+    $('.button-answer').click(function () {
+      var answer = $('.input-answer').val().toLowerCase();
+      if ( answer == "mesial") {
+          window.location.href = "referring-dentists.html";
+      }
+      else {
+        $('.answer-form .error').show();
+      }
+    });
   });
 
 //# sourceMappingURL=index.js.map

@@ -72,7 +72,7 @@
         
         
       <li class="">
-          <a id="referring-dentists-link" href="referring-dentists.html">Referring Dentists</a>
+          <a id="referring-dentists-link" href="question.html">Referring Dentists</a>
       </li>
   
         
@@ -91,7 +91,7 @@
 
   </nav>
 </div>
-<div class="help-info closed">
+<div id="help-info" class="help-info closed">
   <div class="container container-large">
     <div class="row">
       <div class="one-third column">
@@ -103,7 +103,7 @@
       <div class="two-thirds column">
 
         <div id="tab-1" class="tab-content current">
-          <form id="question-form" action="http://mailthis.to/mckeever02" method="post" class="form question-form" >
+          <form id="question-form" action="http://mailthis.to/mckeever02" method="post" class="form question-form">
             <div class="row">
               <div class="one-half column">
                 <label class="primary-label" for="name">Whats your Name?*</label>
@@ -121,10 +121,15 @@
             <div class="row">
               <label class="primary-label" for="question">Ask a question*</label>
               <div class="form-controls">
-                <textarea name="question" class="form-input u-min-full-width" cols="30" rows="10" placeholder="Type a question"></textarea>
+                <textarea name="question" class="form-input u-min-full-width" cols="30" rows="10" placeholder="e.g: How much would it cost to replace my back tooth with an implant?"></textarea>
               </div><!-- /form-controls -->
               <button class="button button-primary button-white button-full-width" type="submit">Submit</button>
             </div><!-- /row -->
+            <div class="row">
+              <input type="hidden" name="_subject" value="New question from a Site Visitor. Reply to this email to respond &ndash; Dental Solutions">
+              <input type="hidden" name="_replyto" value="%email">
+              <input type="hidden" name="_after" value="http://helloiammichael.com/thank-you.html">
+            </div>
           </form>
         </div><!-- /tab-1 -->
 
@@ -210,7 +215,7 @@
         
         
       <li class="">
-          <a id="referring-dentists-link" href="referring-dentists.html">Referring Dentists</a>
+          <a id="referring-dentists-link" href="question.html">Referring Dentists</a>
       </li>
   
         
@@ -276,6 +281,7 @@
         <tr>
           <th>Treatment Type</th>
           <th>Price</th>
+          <th>Sort</th>
         </tr>
       </thead>
       <tbody>
@@ -283,120 +289,147 @@
         <tr>
           <td>New Patient Consultation</td>
           <td>£30</td>
+          <td>0</td>
           <td>General:</td>
         </tr>
         
         <tr>
           <td>Routine consultation and oral health screen</td>
           <td>£30</td>
+          <td>1</td>
           <td>General:</td>
         </tr>
         
         <tr>
           <td>Scale and polish</td>
           <td>£30</td>
+          <td>2</td>
           <td>General:</td>
         </tr>
         
         <tr>
           <td>Scale and polish</td>
           <td>£30</td>
+          <td>3</td>
           <td>General:</td>
         </tr>
         
         <tr>
           <td>Radiographs (per film)</td>
           <td>£10</td>
+          <td>4</td>
           <td>General:</td>
         </tr>
         
         <tr>
           <td>Emergency Appointment</td>
           <td>£30</td>
+          <td>5</td>
           <td>General:</td>
         </tr>
         
         <tr>
           <td>White</td>
           <td>From £60</td>
+          <td>6</td>
           <td>Fillings:</td>
         </tr>
         
         <tr>
           <td>Silver</td>
           <td>From £45</td>
+          <td>7</td>
           <td>Fillings:</td>
         </tr>
         
         <tr>
           <td>Incisor/Premolar</td>
           <td>£160/£210</td>
+          <td>8</td>
           <td>Endodontics:</td>
         </tr>
         
         <tr>
           <td>Molar</td>
           <td>£300</td>
+          <td>9</td>
           <td>Endodontics:</td>
         </tr>
         
         <tr>
           <td>Extraction</td>
           <td>£60</td>
+          <td>10</td>
           <td>Extraction:</td>
         </tr>
         
         <tr>
           <td>Surgical Extraction</td>
           <td>£90</td>
+          <td>11</td>
           <td>Extraction:</td>
         </tr>
         
         <tr>
           <td>Crowns Metal/Gold/tooth coloured</td>
           <td>£300/£500/£420</td>
+          <td>12</td>
           <td>Crowns, Veneers, Bridges and Dentures:</td>
         </tr>
         
         <tr>
           <td>Bridge (per tooth)</td>
           <td>From £450</td>
+          <td>13</td>
           <td>Crowns, Veneers, Bridges and Dentures:</td>
         </tr>
         
         <tr>
           <td>Veneer</td>
           <td>From £350</td>
+          <td>14</td>
           <td>Crowns, Veneers, Bridges and Dentures:</td>
         </tr>
         
         <tr>
           <td>Acrylic denture</td>
           <td>From £600</td>
+          <td>15</td>
           <td>Crowns, Veneers, Bridges and Dentures:</td>
         </tr>
         
         <tr>
           <td>Metal Denture</td>
           <td>From £700</td>
+          <td>16</td>
           <td>Crowns, Veneers, Bridges and Dentures:</td>
         </tr>
         
         <tr>
           <td>Sports Mouthguard</td>
           <td>£40</td>
+          <td>17</td>
           <td>Other:</td>
         </tr>
         
         <tr>
           <td>Teeth Whitening</td>
           <td>£200</td>
+          <td>18</td>
           <td>Other:</td>
         </tr>
         
       </tbody>
     </table>
 
+  </div><!-- /container -->
+</section>
+
+<section class="section-page">
+  <div class="container">
+    <h4 class="color-blue">Payment Plan</h4>
+    <p>To help spread the cost of your dental treatment we provide a range of treatment options including a dental membership plan that entitles you to a 10% discount on treatments up to £1500 as well as covering the majority of your routine needs for a reasonable monthly sum.</p>
+    <p>For larger treatment plans it is possible to pay over a longer term by setting up a direct debit. </p>
   </div><!-- /container -->
 </section>
 

@@ -2764,6 +2764,10 @@ form {
   -ms-grid-row-align: center;
       align-items: center; }
 
+.u-height-0 {
+  height: 0;
+  margin: 0; }
+
 /* Misc
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 hr {

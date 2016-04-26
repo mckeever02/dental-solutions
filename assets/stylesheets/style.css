@@ -1131,6 +1131,16 @@ table.dataTable.no-footer {
       .slider-item img {
         width: auto; } }
 
+.slider-item {
+  min-height: 475px; }
+
+.slider-item-smiles .row {
+  margin-top: 75px; }
+
+@media (min-width: 1260px) {
+  .slider-item-smiles {
+    min-height: 586px; } }
+
 .slick-dots {
   list-style-type: none;
   text-align: center;
@@ -2762,7 +2772,8 @@ form {
 
 .u-flex-v-center {
   -ms-grid-row-align: center;
-      align-items: center; }
+      align-items: center;
+  justify-content: center; }
 
 .u-height-0 {
   height: 0;

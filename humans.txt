@@ -3,11 +3,11 @@
 
 # TEAM
 
-    Michael Mckeever -- <role> -- @mick_mckeever
+    Michael Mckeever -- Developer -- @mick_mckeever
+    Little Thunder Co. -- Design -- littlethunder.co
 
 # THANKS
 
-    <name>
 
 # TECHNOLOGY COLOPHON
 
